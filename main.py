@@ -13,6 +13,7 @@ timmy.speed("fastest")
 x = -200
 y = -200
 timmy.setposition(x, y)
+timmy.penup()
 
 # Extract colors from an image.
 colors = extract('images/spots_1.jpg', 80)
@@ -27,24 +28,19 @@ for color in colors:
     if r + g + b < 600:
         rgb_colors.append((r, g, b))
 
-line = 0
 
 def move_turtle():
     global x
-    global line
     
     for _ in range(10):
         random_col = random.choice(rgb_colors)
         timmy.dot(20, random_col)
-        timmy.penup()
         timmy.forward(50)
-        timmy.pendown()
-    line += 1
+        
     timmy.penup()
     timmy.setposition(x, timmy.ycor() + 50)
-    
 
-while line < 10:
+for _ in range(10):
     move_turtle()
 timmy.hideturtle()
 screen.exitonclick()    
