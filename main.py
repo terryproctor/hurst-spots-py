@@ -9,8 +9,8 @@ timmy = Turtle()
 timmy.hideturtle()
 timmy.penup()
 timmy.speed("fastest")
-x = -200
-y = -200
+x = -225
+y = -225
 timmy.setposition(x, y)
 timmy.penup()
 
@@ -35,13 +35,11 @@ def move_turtle():
         random_col = random.choice(rgb_colors)
         timmy.dot(20, random_col)
         timmy.forward(50)
-        
-    timmy.penup()
+ 
     timmy.setposition(x, timmy.ycor() + 50)
 
 for _ in range(10):
     move_turtle()
 screen.exitonclick()    
-
 
 move_turtle()
