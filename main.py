@@ -6,8 +6,7 @@ screen = Screen()
 screen.colormode(255)
 
 timmy = Turtle()
-timmy.shape("turtle")
-timmy.color("green")
+timmy.hideturtle()
 timmy.penup()
 timmy.speed("fastest")
 x = -200
@@ -42,7 +41,6 @@ def move_turtle():
 
 for _ in range(10):
     move_turtle()
-timmy.hideturtle()
 screen.exitonclick()    
 
 
