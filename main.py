@@ -14,7 +14,7 @@ x = -200
 y = -200
 timmy.setposition(x, y)
 
-# Extract 6 colors from an image.
+# Extract colors from an image.
 colors = extract('images/spots_1.jpg', 80)
 
 rgb_colors = []
